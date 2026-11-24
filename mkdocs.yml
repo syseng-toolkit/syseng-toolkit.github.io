@@ -1,0 +1,62 @@
+site_name: syseng-toolkit
+site_description: Free systems engineering templates for small hardware teams, in Google Sheets and Excel.
+site_url: https://syseng-toolkit.github.io/syseng-toolkit/
+repo_url: https://github.com/syseng-toolkit/syseng-toolkit
+repo_name: syseng-toolkit/syseng-toolkit
+edit_uri: ""
+
+# MkDocs skips a docs/templates/ folder by default (it's meant for theme overrides); this puts it back.
+exclude_docs: |
+  !/templates/
+  # Not public yet. To publish one, delete its line here and add it back under Templates in nav.
+  /templates/task-tracker.md
+  /templates/bom.md
+
+copyright: © 2026 Stephen Mock and Seena Vafaee · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
+    - scheme: slate
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Light mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - search.highlight
+
+nav:
+  - Home: index.md
+  - Get started: get-started.md
+  - Templates:
+      - templates/index.md
+      - Document List: templates/document-list.md
+      - Requirements: templates/requirements.md
+  - Versions and releases: versions.md
+  - Design philosophy: philosophy.md
+  - Contributors: contributors.md
+  - License: license.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg

@@ -5,7 +5,7 @@ Every part in the build, what it costs, what's left to buy, and when it arrives.
 **Version 1.0.0**
 
 <!-- The release step fills in these two links. -->
-[Make a copy (Google Sheets)](https://docs.google.com/spreadsheets/d/RELEASE_SHEET_ID/copy){ .md-button .md-button--primary } [Download .xlsx](https://github.com/syseng-toolkit/syseng-toolkit/releases/tag/bom-v1.0.0){ .md-button }
+[Make a copy (Google Sheets)](https://docs.google.com/spreadsheets/d/RELEASE_SHEET_ID/copy){ .md-button .md-button--primary } [Download .xlsx](https://github.com/syseng-toolkit/syseng-toolkit.github.io/releases/tag/bom-v1.0.0){ .md-button }
 
 ## Tabs
 

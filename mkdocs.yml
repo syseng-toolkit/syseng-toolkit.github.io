@@ -1,8 +1,8 @@
 site_name: syseng-toolkit
 site_description: Free systems engineering templates for small hardware teams, in Google Sheets and Excel.
-site_url: https://syseng-toolkit.github.io/syseng-toolkit/
-repo_url: https://github.com/syseng-toolkit/syseng-toolkit
-repo_name: syseng-toolkit/syseng-toolkit
+site_url: https://syseng-toolkit.github.io/
+repo_url: https://github.com/syseng-toolkit/syseng-toolkit.github.io
+repo_name: syseng-toolkit/syseng-toolkit.github.io
 edit_uri: ""
 
 # MkDocs skips a docs/templates/ folder by default (it's meant for theme overrides); this puts it back.

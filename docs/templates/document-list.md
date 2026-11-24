@@ -5,7 +5,7 @@ The register of every document in a project: one row per document, with its ID, 
 **Version 1.0.0**
 
 <!-- The release step fills in these two links. -->
-[Make a copy (Google Sheets)](https://docs.google.com/spreadsheets/d/RELEASE_SHEET_ID/copy){ .md-button .md-button--primary } [Download .xlsx](https://github.com/syseng-toolkit/syseng-toolkit/releases/tag/document-list-v1.0.0){ .md-button }
+[Make a copy (Google Sheets)](https://docs.google.com/spreadsheets/d/RELEASE_SHEET_ID/copy){ .md-button .md-button--primary } [Download .xlsx](https://github.com/syseng-toolkit/syseng-toolkit.github.io/releases/tag/document-list-v1.0.0){ .md-button }
 
 ## Tabs
 

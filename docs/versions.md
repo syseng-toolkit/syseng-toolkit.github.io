@@ -18,7 +18,7 @@ Open the `Template History` tab in your copy. Each row is one release, and the l
 
 ## Where releases live
 
-Every release is on the GitHub [Releases page](https://github.com/syseng-toolkit/syseng-toolkit/releases), tagged by template and version (for example `requirements-v1.0.0`), with its `.xlsx` file and release notes. Older versions stay there, so you can always get the exact file a project started from.
+Every release is on the GitHub [Releases page](https://github.com/syseng-toolkit/syseng-toolkit.github.io/releases), tagged by template and version (for example `requirements-v1.0.0`), with its `.xlsx` file and release notes. Older versions stay there, so you can always get the exact file a project started from.
 
 The **Make a copy** button on each template page always points to the latest release.
 

@@ -1,6 +1,6 @@
 # Templates
 
-The templates are based on **ISO/IEC/IEEE 15288**, the international standard for system life cycle processes, arranged as a **V-model**: you work down the left side defining what to build, build it at the bottom, then work up the right side checking each level against what was defined across from it. Each stage is named after a 15288 technical process. Templates in the band below the V support its technical management processes, which run through the whole project.
+The templates are based on **[ISO/IEC/IEEE 15288](https://sebokwiki.org/wiki/ISO/IEC/IEEE_15288)**, the international standard for system life cycle processes, arranged as a **V-model**: you work down the left side defining what to build, build it at the bottom, then work up the right side checking each level against what was defined across from it. Each stage is named after a 15288 technical process. Templates in the band below the V support its technical management processes, which run through the whole project.
 
 <!-- vmodel -->
 

@@ -12,7 +12,6 @@ The register of every document in a project: one row per document, with its ID, 
 | Tab | What it's for |
 |---|---|
 | Document List | One row per document. Add new documents at the bottom. |
-| Document Release | One line each time this list is signed off (for example "Release 1 approved"). |
 | Template History | Release notes for this template. The last row is the version your copy is on. |
 
 ## How to use it
@@ -45,4 +44,4 @@ Everything works in both. In Google Sheets the README tab warns before you edit 
 
 ### 1.0.0
 
-First release. One row per project document (D-###): title, type, release, status, location, link, created by, date added, notes. Document Release tab for the project's own releases.
+First release. One row per project document (D-###): title, type, release, status, location, link, created by, date added, notes.

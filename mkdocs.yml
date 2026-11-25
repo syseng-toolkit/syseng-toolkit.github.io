@@ -39,6 +39,7 @@ theme:
 
 hooks:
   - hooks/vmodel.py
+  - hooks/cache_bust.py
 
 watch:
   - data

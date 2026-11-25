@@ -9,4 +9,5 @@ plugins:
   - live-edit
 hooks:
   - hooks/vmodel.py
+  - hooks/cache_bust.py
   - hooks/live_edit_guard.py

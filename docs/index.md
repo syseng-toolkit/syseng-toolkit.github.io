@@ -8,7 +8,7 @@ They were built for robotics projects with a handful of engineers: enough struct
 
 ## The templates
 
-They're based on the ISO/IEC/IEEE 15288 life cycle processes, arranged as a V-model: define down the left, build at the bottom, verify up the right. See [Templates](templates/index.md) for where each one fits.
+They're based on the [ISO/IEC/IEEE 15288](https://sebokwiki.org/wiki/ISO/IEC/IEEE_15288) life cycle processes, arranged as a V-model: define down the left, build at the bottom, verify up the right. See [Templates](templates/index.md) for where each one fits.
 
 <!-- vmodel -->
 

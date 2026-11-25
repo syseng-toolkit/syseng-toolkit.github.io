@@ -80,3 +80,8 @@
 .tg-cap strong { color: var(--md-default-fg-color); }
 /* current page in the sidebar and table of contents: bold, since it no longer has a color */
 .md-nav__link--active, .md-nav__item--active > .md-nav__link { font-weight: 700; }
+
+/* Contributors: small round GitHub photos next to each name */
+.md-typeset .person { margin: .7rem 0; }
+.md-typeset .avatar { width: 48px; height: 48px; border-radius: 50%; vertical-align: middle; margin-right: .7rem;
+  border: 1px solid var(--md-default-fg-color--lightest); }

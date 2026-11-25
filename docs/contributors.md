@@ -2,8 +2,15 @@
 
 syseng-toolkit is made by:
 
-- **Stephen Mock**, robotics engineer · [Website](https://sjmock99.github.io/) · [LinkedIn](https://www.linkedin.com/in/stephenjmock/)
-- **Seena Vafaee**
+<div class="people" markdown>
+
+![Stephen Mock](https://github.com/sjmock99.png?size=96){ .avatar } **Stephen Mock**, robotics engineer · [Website](https://sjmock99.github.io/) · [LinkedIn](https://www.linkedin.com/in/stephenjmock/)
+{ .person }
+
+![Seena Vafaee](https://github.com/svafaee1.png?size=96){ .avatar } **Seena Vafaee**
+{ .person }
+
+</div>
 
 ## Suggesting a change
 

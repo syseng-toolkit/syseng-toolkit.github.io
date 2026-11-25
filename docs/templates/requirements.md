@@ -11,13 +11,13 @@ What the system must do, how each requirement flows down from the one above it, 
 
 | Tab | What it's for |
 |---|---|
+| Dashboard (READ ONLY) | Status counts, % verified, by subsystem, verification method and priority, recent changes, and what needs attention. |
 | Requirements | The master list. One row per requirement, kept forever. |
+| Lists | Dropdown values (subsystems, owners). Change names here once. |
 | By Subsystem (READ ONLY) | Pick a subsystem in the yellow cell to see only its requirements. |
 | Trace Tree (READ ONLY) | Indented outline of the flow-down, parent → children. |
-| Dashboard (READ ONLY) | Status counts, % verified, by subsystem, verification method and priority, recent changes, and what needs attention. |
 | Change Log | One line per change to a requirement: date, ID, what changed, was, now, reason, by. History is never overwritten. |
 | Document Release | Official released versions of your requirements (v1.0, v1.1…), for example at a design review. |
-| Lists | Dropdown values (subsystems, owners). Change names here once. |
 | Template History | Release notes for this template. The last row is the version your copy is on. |
 
 ## Writing good requirements

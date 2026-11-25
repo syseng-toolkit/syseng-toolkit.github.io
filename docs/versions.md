@@ -1,7 +1,4 @@
 # Versions and releases
-
-Each template has its own version number, so a fix to one template doesn't change the others.
-
 ## Version numbers
 
 Versions follow [semantic versioning](https://semver.org): `MAJOR.MINOR.PATCH`.
@@ -29,5 +26,3 @@ Templates are copied, not linked, so a project's copy doesn't change when a new 
 1. Read the release notes for every version since yours (your version is the last row of `Template History`).
 2. Make the same changes in your copy: new columns, formulas or rules. Don't copy a whole tab over your project's tab, because that replaces your data.
 3. Add the release's row to your `Template History`.
-
-You don't have to update. A project can stay on the version it started with.

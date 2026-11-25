@@ -8,6 +8,7 @@ Placeholders a page can use (each on its own line):
 """
 import html
 import os
+import re
 import posixpath
 
 import yaml
@@ -128,31 +129,102 @@ def release(t):
     return t.get("version") if t["status"] == "released" else LABEL[t["status"]]
 
 
+REPO = "https://github.com/syseng-toolkit/syseng-toolkit.github.io"
+
+
+def downloads(t):
+    """(Google Sheets copy link, .xlsx link) for a released template, from its sheet and version."""
+    if not t.get("sheet"):
+        raise ValueError(f"templates.yml: released template {t['name']!r} needs a sheet: (the released copy's ID)")
+    v, k = t["version"], t["key"]
+    return (f"https://docs.google.com/spreadsheets/d/{t['sheet']}/copy",
+            f"{REPO}/releases/download/{k}-v{v}/syseng-toolkit-{k}-{v}.xlsx")
+
+
+def get_it(t):
+    if t["status"] != "released":
+        return ""
+    copy, xlsx = downloads(t)
+    return f"[Sheets]({copy}) · [Excel]({xlsx})"
+
+
+def released(data, key, what):
+    t = next((t for t in data["templates"] if t.get("key") == key and t["status"] == "released"), None)
+    if t is None:
+        raise ValueError(f"{what}: no released template with key {key!r} in templates.yml")
+    return t
+
+
+def view_url(t):
+    """The released Sheet's read-only live view, opened on its main tab (tab: gid, default 0)."""
+    if not t.get("sheet"):
+        raise ValueError(f"templates.yml: released template {t['name']!r} needs a sheet:")
+    return f"https://docs.google.com/spreadsheets/d/{t['sheet']}/htmlview?widget=true&headers=false&gid={t.get('tab', 0)}"
+
+
+def preview(data, key):
+    t = released(data, key, "template-preview")
+    return (f'<iframe class="sheet-preview" src="{view_url(t)}" loading="lazy" '
+            f'title="{t["name"]} template, live view"></iframe>')
+
+
+def gallery(data, page_url):
+    """Home page: a sideways-scrolling strip of live, zoomed-out previews, one card per released
+    template. The preview opens the pop-up (docs/javascripts/sheet-preview.js); the name opens
+    the template's page."""
+    cards = []
+    for t in data["templates"]:
+        if t["status"] != "released":
+            continue
+        name, view, page = html.escape(t["name"]), html.escape(view_url(t)), href(page_url, t["key"])
+        cards.append(
+            '<div class="tg-card">'
+            f'<a class="tg-thumb sheet-peek" href="{view}" data-title="{name}" data-page="{page}" '
+            f'target="_blank" rel="noopener" aria-label="Preview the {name} template">'
+            f'<iframe src="{view}" loading="lazy" tabindex="-1" aria-hidden="true" title="{name}"></iframe></a>'
+            f'<a class="tg-cap" href="{page}"><strong>{name}</strong><span class="tg-go">Template page →</span></a>'
+            '</div>')
+    return ('<div class="tpl-gallery">'
+            '<button type="button" class="tg-nav tg-prev" aria-label="Previous templates">&#8249;</button>'
+            f'<div class="tg-track">{"".join(cards)}</div>'
+            '<button type="button" class="tg-nav tg-next" aria-label="More templates">&#8250;</button>'
+            '</div>')
+
+
+def buttons(data, key):
+    copy, xlsx = downloads(released(data, key, "template-buttons"))
+    return (f"[Make a copy (Google Sheets)]({copy}){{ .md-button .md-button--primary }} "
+            f"[Download .xlsx]({xlsx}){{ .md-button }}")
+
+
 def table(data, kind, page_src):
     ts = data["templates"]
     if kind == "home":
         rows = [t for t in ts if t["status"] != "planned"]
-        head = "| Template | What it's for | Release |\n|---|---|---|"
-        body = [f"| {link(t, page_src)} | {t['about']} | {release(t)} |" for t in rows]
+        head = "| Template | What it's for | Release | Downloads |\n|---|---|---|---|"
+        body = [f"| {link(t, page_src)} | {t['about']} | {release(t)} | {get_it(t)} |" for t in rows]
     elif kind == "stage":
         rows = [t for t in ts if places(t) and places(t)[0] != "project"]
-        head = "| Template | What it covers | 15288 process | Release |\n|---|---|---|---|"
-        body = [f"| {link(t, page_src)} | {t.get('stage', t['about'])} | {t.get('process', '')} | {release(t)} |" for t in rows]
+        head = "| Template | What it covers | Release | Downloads |\n|---|---|---|---|"
+        body = [f"| {link(t, page_src)} | {t.get('stage', t['about'])} | {release(t)} | {get_it(t)} |" for t in rows]
     elif kind == "project":
         rows = [t for t in ts if "project" in places(t)]
-        head = "| Template | What it does | 15288 process | Release |\n|---|---|---|---|"
-        body = [f"| {link(t, page_src)} | {t['about']} | {t.get('process', '')} | {release(t)} |" for t in rows]
+        head = "| Template | What it does | Release | Downloads |\n|---|---|---|---|"
+        body = [f"| {link(t, page_src)} | {t['about']} | {release(t)} | {get_it(t)} |" for t in rows]
     else:
         raise ValueError(f"unknown table {kind!r}")
     return "\n".join([head] + body)
 
 
 def on_page_markdown(markdown, page, config, files):
-    if "<!-- vmodel -->" not in markdown and "<!-- templates-table:" not in markdown:
+    if not any(m in markdown for m in ("<!-- vmodel -->", "<!-- templates-table:", "<!-- template-buttons:", "<!-- template-preview:", "<!-- templates-gallery -->")):
         return markdown
     data = load()
     src = page.file.src_uri
     markdown = markdown.replace("<!-- vmodel -->", vmodel_svg(data, page.url))
     for kind in ("home", "stage", "project"):
         markdown = markdown.replace(f"<!-- templates-table:{kind} -->", table(data, kind, src))
+    markdown = re.sub(r"<!-- template-buttons:([\w-]+) -->", lambda m: buttons(data, m.group(1)), markdown)
+    markdown = markdown.replace("<!-- templates-gallery -->", gallery(data, page.url))
+    markdown = re.sub(r"<!-- template-preview:([\w-]+) -->", lambda m: preview(data, m.group(1)), markdown)
     return markdown

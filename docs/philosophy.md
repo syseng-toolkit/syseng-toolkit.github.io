@@ -2,6 +2,12 @@
 
 These templates come from building robots with small teams. Each rule below is there because skipping it cost us time.
 
+## Based on ISO/IEC/IEEE 15288, arranged as a V
+
+The templates follow the system life cycle processes of **ISO/IEC/IEEE 15288:2023** (*Systems and software engineering — System life cycle processes*), arranged as a **V-model**. The left side of the V defines the system (stakeholder needs, system requirements, architecture, design), the bottom builds it, and the right side checks each level against what was defined across from it (verification, integration, validation). Templates such as the Task Tracker, the Risk Register and the Document List support the standard's technical management processes, which run through the whole project. [Templates](templates/index.md) shows where each one fits.
+
+The toolkit is *aligned with* the standard, not a way to claim compliance with it. Compliance is a statement about how an organization runs its processes, and no set of templates can make it for you. The toolkit covers the development part of the life cycle for a small team; the standard's agreement and organizational processes, and its later stages (transition, operation, maintenance and disposal), are out of scope for now.
+
 ## Spreadsheets, on purpose
 
 Every engineer can open a spreadsheet. There's no tool to install, no license to buy and no data trapped in a format that outlives the vendor. A spreadsheet also shows its work: click any number and you see the formula behind it.

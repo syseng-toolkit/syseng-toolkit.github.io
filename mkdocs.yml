@@ -30,11 +30,22 @@ theme:
         icon: material/brightness-4
         name: Light mode
   features:
-    - navigation.sections
+    - navigation.indexes
+    - navigation.expand
     - navigation.top
     - navigation.footer
     - content.code.copy
     - search.highlight
+
+hooks:
+  - hooks/vmodel.py
+
+watch:
+  - data
+  - hooks
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md
@@ -43,10 +54,11 @@ nav:
       - templates/index.md
       - Document List: templates/document-list.md
       - Requirements: templates/requirements.md
-  - Versions and releases: versions.md
-  - Design philosophy: philosophy.md
-  - Contributors: contributors.md
-  - License: license.md
+  - About:
+      - Versions and releases: versions.md
+      - Design philosophy: philosophy.md
+      - Contributors: contributors.md
+      - License: license.md
 
 markdown_extensions:
   - admonition

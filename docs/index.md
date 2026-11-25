@@ -8,12 +8,13 @@ They were built for robotics projects with a handful of engineers: enough struct
 
 ## The templates
 
-| Template | What it's for | Version |
-|---|---|---|
-| [Document List](templates/document-list.md) | The register of every project document: ID, where it lives, a link. Start here. | 1.0.0 |
-| [Requirements](templates/requirements.md) | What the system must do, how each requirement flows down, and how it will be verified. | 1.0.0 |
+They're based on the ISO/IEC/IEEE 15288 life cycle processes, arranged as a V-model: define down the left, build at the bottom, verify up the right. See [Templates](templates/index.md) for where each one fits.
 
-More templates are on the way: a Task Tracker, a Bill of Materials, a Trade Matrix and a Risk Register.
+<!-- vmodel -->
+
+<!-- templates-table:home -->
+
+More are planned; see [Templates](templates/index.md).
 
 ## What every template has
 

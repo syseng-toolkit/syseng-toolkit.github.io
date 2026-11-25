@@ -1,0 +1,87 @@
+# Every template, once. The site's V-model diagram and template tables are built from this file
+# by hooks/vmodel.py. To add or release a template, edit its entry here; nothing else.
+#
+# status:   released (has a page; name links to it) | soon (built, in review) | planned (an idea)
+# key:      the page name under docs/templates/ (released templates only)
+# where:    project            -> the "across the whole project" band
+#           left:<stage>       -> under a stage on the left of the V (see stages below)
+#           right:<stage>      -> under a stage on the right of the V
+#           tests              -> a bracket across every test level on the right
+#           a list of these places it in several spots (the first one is its main place)
+# stage:    "What it covers" on the Templates page (templates on the V)
+# about:    one short line for the tables
+# process:  the ISO/IEC/IEEE 15288 process(es) it supports (names only; never copy the standard's text)
+
+stages:
+  # Left (top to bottom) and right (bottom to top) are paired level by level.
+  # Named after ISO/IEC/IEEE 15288 technical processes.
+  left:  [Stakeholder needs, System requirements definition, Architecture definition, Design definition]
+  bottom: Implementation
+  right: [Part verification, Integration, System verification, Validation]
+  band: Technical management
+
+templates:
+  - name: Document List
+    process: Configuration management; Information management
+    key: document-list
+    status: released
+    version: 1.0.0
+    where: project
+    about: Every project document, where it lives, and a link. Start here.
+
+  - name: Requirements
+    process: System requirements definition; Verification
+    key: requirements
+    status: released
+    version: 1.0.0
+    where: [left:System requirements definition, right:System verification]
+    right_note: its Verification column
+    stage: Each requirement, its flow-down, and how it will be verified
+    about: What the system must do, the flow-down, and verification.
+
+  - name: Trade Matrix
+    process: Decision management; System analysis
+    status: soon
+    where: left:Architecture definition
+    stage: Choosing between design options against weighted criteria
+    about: Design options scored against weighted criteria.
+
+  - name: Bill of Materials
+    process: Design definition; Implementation
+    status: soon
+    where: left:Design definition
+    stage: "The parts: cost, what's left to buy, deliveries"
+    about: Parts, cost, what's left to buy, and deliveries.
+
+  - name: Power Budget
+    process: Design definition; System analysis
+    status: planned
+    where: left:Design definition
+    stage: Each load's current and power against its supply, with margin
+    about: Each load's power against its supply, with margin.
+
+  - name: I/O Budget
+    process: Design definition
+    status: planned
+    where: left:Design definition
+    stage: Controller pins and channels, and how many are left
+    about: Controller pins and channels, and how many are left.
+
+  - name: Test Plan & Results
+    process: Verification; Integration
+    status: planned
+    where: tests
+    stage: Test cases at every level, linked to requirements, and their results
+    about: Test cases linked to requirements, and their results.
+
+  - name: Task Tracker
+    process: Project planning; Project assessment and control
+    status: soon
+    where: project
+    about: Tasks, milestones and sprints, with a Gantt chart.
+
+  - name: Risk Register
+    process: Risk management
+    status: soon
+    where: project
+    about: Risks, how likely and how bad, and the plan for each.

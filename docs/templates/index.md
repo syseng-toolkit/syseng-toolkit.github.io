@@ -1,14 +1,17 @@
 # Templates
 
-| Template | What it's for | Version |
-|---|---|---|
-| [Document List](document-list.md) | The register of every project document. Start here. | 1.0.0 |
-| [Requirements](requirements.md) | What the system must do, the flow-down, and verification. | 1.0.0 |
+The templates are based on **ISO/IEC/IEEE 15288**, the international standard for system life cycle processes, arranged as a **V-model**: you work down the left side defining what to build, build it at the bottom, then work up the right side checking each level against what was defined across from it. Each stage is named after a 15288 technical process. Templates in the band below the V support its technical management processes, which run through the whole project.
 
-Coming later: Task Tracker (tasks, milestones and sprints), Bill of Materials (parts, cost and deliveries), Trade Matrix (compare design options against weighted criteria) and Risk Register (likelihood, impact and mitigation).
+<!-- vmodel -->
 
-## Reading a template page
+## Technical processes
 
-Each page has the download buttons, what each tab is for, how to use it day to day, every column with what goes in it, what's different in Excel, and the release notes. The README tab inside each file has the short version and links back here.
+<!-- templates-table:stage -->
 
-**Typed** columns are the white ones you fill in. **Auto** columns are gray and calculate themselves; don't type in them.
+## Technical management processes
+
+<!-- templates-table:project -->
+
+**Coming soon** templates are built and being reviewed. **Planned** ones aren't built yet. Want one sooner, or have an idea for another? [Open an issue](https://github.com/syseng-toolkit/syseng-toolkit.github.io/issues).
+
+Each template's page has the download buttons, what each tab is for, every column, what's different in Excel, and the release notes. **Typed** columns are the white ones you fill in; **auto** columns are gray and calculate themselves.

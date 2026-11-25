@@ -1,0 +1,11 @@
+/* V-model diagram on the Templates page */
+.vmodel { max-width: 760px; margin: 1rem auto 1.5rem; display: block; }
+.vmodel .arm { fill: none; stroke: var(--md-default-fg-color--lighter); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.vmodel .link { stroke: var(--md-default-fg-color--lighter); stroke-width: 1.5; stroke-dasharray: 5 5; }
+.vmodel .dot { fill: var(--md-default-bg-color); stroke: var(--md-default-fg-color--light); stroke-width: 2; }
+.vmodel .stage { fill: var(--md-default-fg-color--light); font-size: 13px; }
+.vmodel .side { fill: var(--md-default-fg-color--lighter); font-size: 12px; font-style: italic; }
+.vmodel .tpl { font-size: 14px; font-weight: 700; }
+.vmodel a .tpl { fill: var(--md-accent-fg-color); text-decoration: underline; }
+.vmodel .soon { fill: var(--md-default-fg-color--lighter); }
+.vmodel .band { fill: var(--md-default-fg-color--lightest); }

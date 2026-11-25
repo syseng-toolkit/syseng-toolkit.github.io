@@ -17,7 +17,7 @@ stages:
   # Named after ISO/IEC/IEEE 15288 technical processes.
   left:  [Stakeholder needs, System requirements definition, Architecture definition, Design definition]
   bottom: Implementation
-  right: [Part verification, Integration, System verification, Validation]
+  right: [Unit verification, Integration, System verification, Validation]
   band: Technical management
 
 templates:

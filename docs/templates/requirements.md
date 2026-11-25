@@ -4,8 +4,9 @@ What the system must do, how each requirement flows down from the one above it, 
 
 **Version 1.0.0**
 
-<!-- The release step fills in these two links. -->
-[Make a copy (Google Sheets)](https://docs.google.com/spreadsheets/d/RELEASE_SHEET_ID/copy){ .md-button .md-button--primary } [Download .xlsx](https://github.com/syseng-toolkit/syseng-toolkit.github.io/releases/tag/requirements-v1.0.0){ .md-button }
+Released 2026-11-25 · [all releases](https://github.com/syseng-toolkit/syseng-toolkit.github.io/releases)
+
+[Make a copy (Google Sheets)](https://docs.google.com/spreadsheets/d/1z4E65QFozaYRceZlbSY0BEcJGd0UgpfJk-wZZ2N0sGo/copy){ .md-button .md-button--primary } [Download .xlsx](https://github.com/syseng-toolkit/syseng-toolkit.github.io/releases/download/requirements-v1.0.0/syseng-toolkit-requirements-1.0.0.xlsx){ .md-button }
 
 ## Tabs
 

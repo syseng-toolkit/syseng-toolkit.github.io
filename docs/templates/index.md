@@ -14,8 +14,6 @@ The templates are based on **[ISO/IEC/IEEE 15288](https://sebokwiki.org/wiki/ISO
 
 **Coming soon** templates are built and being reviewed. **Planned** ones aren't built yet. Want one sooner, or have an idea for another? [Open an issue](https://github.com/syseng-toolkit/syseng-toolkit.github.io/issues).
 
-Each template's page has the download buttons, what each tab is for, every column, what's different in Excel, and the release notes.
-
 ## What every template has
 
 - **Typed columns are white, calculated columns are gray.** Formulas are filled in ahead, so you only ever type in white cells.

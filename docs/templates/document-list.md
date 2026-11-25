@@ -2,11 +2,13 @@
 
 The register of every document in a project: one row per document, with its ID, where it lives and a link. If it isn't in the Document List, it doesn't officially exist.
 
-**Version 1.0.0**
+Version 1.0.0 · released 2026-11-25 · [release notes](#release-notes)
 
-Released 2026-11-25 · [all releases](https://github.com/syseng-toolkit/syseng-toolkit.github.io/releases)
+<!-- template-buttons:document-list -->
 
-[Make a copy (Google Sheets)](https://docs.google.com/spreadsheets/d/1tu9KQy90gAaCCBUsVmihjDNGsxZiD_XzSM-vfMnwiJE/copy){ .md-button .md-button--primary } [Download .xlsx](https://github.com/syseng-toolkit/syseng-toolkit.github.io/releases/download/document-list-v1.0.0/syseng-toolkit-document-list-1.0.0.xlsx){ .md-button }
+<!-- template-preview:document-list -->
+
+This is the released copy, live: scroll it, and click the tabs along the bottom. It's read-only; use **Make a copy** to get your own.
 
 ## Tabs
 
@@ -41,8 +43,11 @@ Released 2026-11-25 · [all releases](https://github.com/syseng-toolkit/syseng-t
 
 Everything works in both. In Google Sheets the README tab warns before you edit it; Excel has no warning-only protection.
 
+---
+
 ## Release notes
+???+ note "1.0.0 · 2026-11-25"
 
-### 1.0.0
+    First release. One row per project document (D-###): title, type, release, status, location, link, created by, date added, notes.
 
-First release. One row per project document (D-###): title, type, release, status, location, link, created by, date added, notes.
+    [Download 1.0.0 (.xlsx)](https://github.com/syseng-toolkit/syseng-toolkit.github.io/releases/download/document-list-v1.0.0/syseng-toolkit-document-list-1.0.0.xlsx)

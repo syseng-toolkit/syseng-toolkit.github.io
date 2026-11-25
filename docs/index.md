@@ -1,6 +1,8 @@
 # syseng-toolkit
 
-Free systems engineering templates for small teams, in spreadsheets that work in Google Sheets and Excel.
+Structured design through free systems engineering templates for small teams.
+
+<!-- templates-gallery -->
 
 [Get started](get-started.md){ .md-button .md-button--primary } [See the templates](templates/index.md){ .md-button }
 

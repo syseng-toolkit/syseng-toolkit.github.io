@@ -2,11 +2,13 @@
 
 What the system must do, how each requirement flows down from the one above it, and how it will be verified.
 
-**Version 1.0.0**
+Version 1.0.0 · released 2026-11-25 · [release notes](#release-notes)
 
-Released 2026-11-25 · [all releases](https://github.com/syseng-toolkit/syseng-toolkit.github.io/releases)
+<!-- template-buttons:requirements -->
 
-[Make a copy (Google Sheets)](https://docs.google.com/spreadsheets/d/1z4E65QFozaYRceZlbSY0BEcJGd0UgpfJk-wZZ2N0sGo/copy){ .md-button .md-button--primary } [Download .xlsx](https://github.com/syseng-toolkit/syseng-toolkit.github.io/releases/download/requirements-v1.0.0/syseng-toolkit-requirements-1.0.0.xlsx){ .md-button }
+<!-- template-preview:requirements -->
+
+This is the released copy, live: scroll it, and click the tabs along the bottom. It's read-only; use **Make a copy** to get your own.
 
 ## Tabs
 
@@ -88,8 +90,11 @@ Add a line at the bottom of the Change Log, newest last (Ctrl+; types today's da
 
 Everything calculates in both. Two extras are Google Sheets only: warning-only protection on the README and READ ONLY tabs, and the bright pink warning when a formula is typed over.
 
+---
+
 ## Release notes
+???+ note "1.0.0 · 2026-11-25"
 
-### 1.0.0
+    First release. Requirements list (REQ-###) with Parent and Related trace links, and automatic Children, Linked From and Check columns. Change Log with Children to check. By Subsystem, Trace Tree and Dashboard views (READ ONLY). Document Release tab for the project's own releases.
 
-First release. Requirements list (REQ-###) with Parent and Related trace links, and automatic Children, Linked From and Check columns. Change Log with Children to check. By Subsystem, Trace Tree and Dashboard views (READ ONLY). Document Release tab for the project's own releases.
+    [Download 1.0.0 (.xlsx)](https://github.com/syseng-toolkit/syseng-toolkit.github.io/releases/download/requirements-v1.0.0/syseng-toolkit-requirements-1.0.0.xlsx)

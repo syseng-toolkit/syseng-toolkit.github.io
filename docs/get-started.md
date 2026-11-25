@@ -1,33 +1,16 @@
 # Get started
 
-## 1. Pick Google Sheets or Excel
+## 1. [Get a copy of each template](templates/index.md)
 
-Both get the same templates.
+Each template comes as a Google Sheet (**Make a copy**) or an Excel file (**Download .xlsx**), with the same tabs and columns. Use Sheets if your team edits together in a browser, or Excel.
 
-- **Google Sheets** if your team edits together in a browser. You also get a few extras that Excel doesn't have: tabs that warn before you type in them, and a bright pink warning when someone types over a formula.
-- **Excel** (Microsoft 365, Excel 2024 or Excel for the web) if you don't use Google. No account needed.
+Start with the [Document List](templates/document-list.md). It lists every document in your project and gives each one the next number as you add it: the Document List is D-001, the next document is D-002, and so on. Numbers are never reused, so D-002 always means the same document.
 
-## 2. Get a copy of each template
-
-Every template page has two buttons:
-
-- **Make a copy** opens the released Google Sheet and asks to copy it into your own Drive.
-- **Download .xlsx** downloads the Excel file from the release.
-
-Start with the [Document List](templates/document-list.md), then add [Requirements](templates/requirements.md). Number them like this:
-
-| ID | Document |
-|---|---|
-| D-001 | Document List (it lists all the others) |
-| D-002 | Requirements |
-
-D-numbers belong to your project. Give each new document, template or not, the next free number in your Document List.
-
-## 3. Clear the examples
+## 2. Clear the examples
 
 Each template comes with a few example rows so you can see how it works. When you're ready, clear the **white** cells of the example rows. Leave the gray columns and the header row alone: they hold the formulas.
 
-## 4. Name your copies
+## 3. Name your copies
 
 We suggest `<PROJECT>-D-<NNN>-<Tool>` with no spaces, for example `ROVER-D-002-Requirements`. Names without spaces are easy to use from the command line and in links.
 

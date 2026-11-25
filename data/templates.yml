@@ -3,6 +3,9 @@
 #
 # status:   released (has a page; name links to it) | soon (built, in review) | planned (an idea)
 # key:      the page name under docs/templates/ (released templates only)
+# sheet:    the released, locked Google Sheet's ID (released templates only); the Sheets and Excel
+#           links in the tables and on the template's page are built from it, key and version
+#           (and the live view on the template's page, opened on tab: <gid>, default 0)
 # where:    project            -> the "across the whole project" band
 #           left:<stage>       -> under a stage on the left of the V (see stages below)
 #           right:<stage>      -> under a stage on the right of the V
@@ -24,6 +27,7 @@ templates:
   - name: Document List
     process: Configuration management; Information management
     key: document-list
+    sheet: 1tu9KQy90gAaCCBUsVmihjDNGsxZiD_XzSM-vfMnwiJE
     status: released
     version: 1.0.0
     where: project
@@ -32,6 +36,7 @@ templates:
   - name: Requirements
     process: System requirements definition; Verification
     key: requirements
+    sheet: 1z4E65QFozaYRceZlbSY0BEcJGd0UgpfJk-wZZ2N0sGo
     status: released
     version: 1.0.0
     where: [left:System requirements definition, right:System verification]

@@ -2,7 +2,7 @@
 
 syseng-toolkit is made by:
 
-- **Stephen Mock**, robotics engineer
+- **Stephen Mock**, robotics engineer · [Website](https://sjmock99.github.io/) · [LinkedIn](https://www.linkedin.com/in/stephenjmock/)
 - **Seena Vafaee**
 
 ## Suggesting a change

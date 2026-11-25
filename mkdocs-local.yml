@@ -1,0 +1,12 @@
+# Local preview with an edit button on every page (not used by the public site):
+#   pip install -r requirements-local.txt
+#   mkdocs serve -f mkdocs-local.yml
+# Edits save straight to docs/. hooks/live_edit_guard.py keeps the editor to this preview and docs/.
+INHERIT: mkdocs.yml
+dev_addr: 127.0.0.1:8000
+plugins:
+  - search
+  - live-edit
+hooks:
+  - hooks/vmodel.py
+  - hooks/live_edit_guard.py

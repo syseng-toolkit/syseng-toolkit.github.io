@@ -13,6 +13,15 @@ pip install -r requirements.txt
 mkdocs serve
 ```
 
+To edit pages in the browser while you preview, run the local config instead:
+
+```
+pip install -r requirements-local.txt
+mkdocs serve -f mkdocs-local.yml
+```
+
+Each page then has an edit button (from [mkdocs-live-edit-plugin](https://github.com/eddyluten/mkdocs-live-edit-plugin)) that saves straight to its file in `docs/`. It exists only in this local preview; the public site never has it. `hooks/live_edit_guard.py` lets only the preview's own pages use it, and only on files inside `docs/`. Review your changes with `git diff` before committing, as usual.
+
 Pages are in `docs/`. Pushing to `main` publishes the site (`.github/workflows/pages.yml`).
 
 Template pages that aren't public yet are listed under `exclude_docs` in `mkdocs.yml`: the site skips them. To publish one, delete its line there and add it to `nav`.

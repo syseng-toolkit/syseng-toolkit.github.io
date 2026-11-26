@@ -22,4 +22,4 @@ The full license text is in the [LICENSE](https://github.com/syseng-toolkit/syse
 
 ## Privacy
 
-This site counts visits with [GoatCounter](https://www.goatcounter.com/), which uses no cookies and collects no personal information: only which pages are viewed, which links to templates are clicked, and where visitors came from.
+This site counts visits with [GoatCounter](https://www.goatcounter.com/), which uses no cookies and collects no personal information: only which pages are viewed, which template links are clicked, the site a visitor came from, and their browser, screen size and country. IP addresses are not stored.

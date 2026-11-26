@@ -145,7 +145,9 @@ def get_it(t):
     if t["status"] != "released":
         return ""
     copy, xlsx = downloads(t)
-    return f"[Sheets]({copy}) · [Excel]({xlsx})"
+    k = t["key"]
+    return (f"[Sheets]({copy}){{ target=_blank rel=noopener data-goatcounter-click=copy-{k} }} · "
+            f"[Excel]({xlsx}){{ data-goatcounter-click=xlsx-{k} }}")
 
 
 def released(data, key, what):
@@ -198,8 +200,9 @@ def gallery(data, page_url):
 
 def buttons(data, key):
     copy, xlsx = downloads(released(data, key, "template-buttons"))
-    return (f"[Make a copy (Google Sheets)]({copy}){{ .md-button .md-button--primary }} "
-            f"[Download .xlsx]({xlsx}){{ .md-button }}")
+    # data-goatcounter-click: counted as an event when analytics is on (overrides/main.html)
+    return (f"[Make a copy (Google Sheets)]({copy}){{ .md-button .md-button--primary target=_blank rel=noopener data-goatcounter-click=copy-{key} }} "
+            f"[Download .xlsx]({xlsx}){{ .md-button data-goatcounter-click=xlsx-{key} }}")
 
 
 def table(data, kind, page_src):

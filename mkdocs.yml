@@ -52,7 +52,7 @@ watch:
 
 extra:
   # GoatCounter site code (the part before .goatcounter.com). Empty = no counting.
-  goatcounter: ""
+  goatcounter: syseng-toolkit
 
 extra_css:
   - stylesheets/extra.css

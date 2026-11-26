@@ -16,7 +16,7 @@ The templates are based on **[ISO/IEC/IEEE 15288](https://sebokwiki.org/wiki/ISO
 
 ## What every template has
 
-- **Typed columns are white, calculated columns are gray.** Formulas are filled in ahead, so you only ever type in white cells.
+- **Auto-filled columns are gray.** Formulas are filled in ahead, so do not overwrite gray cells.
 - **A note on every column header.** Hover over a header to see what goes in the column.
 - **A README tab** that explains the tabs and the rules, and links back to this site.
 - **IDs that are never reused** (`D-###`, `REQ-###`), so a reference written down today still means the same thing next year.

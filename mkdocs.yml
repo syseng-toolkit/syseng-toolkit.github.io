@@ -16,6 +16,7 @@ copyright: © 2026 Stephen Mock and Seena Vafaee · <a href="https://creativecom
 
 theme:
   name: material
+  custom_dir: overrides   # main.html: link preview card and visit counts
   icon:
     logo: material/toolbox
   favicon: assets/favicon.svg
@@ -47,6 +48,11 @@ hooks:
 watch:
   - data
   - hooks
+  - overrides
+
+extra:
+  # GoatCounter site code (the part before .goatcounter.com). Empty = no counting.
+  goatcounter: ""
 
 extra_css:
   - stylesheets/extra.css

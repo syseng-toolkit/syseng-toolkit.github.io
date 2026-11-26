@@ -66,7 +66,7 @@
   --md-accent-fg-color: #fff;
   --md-accent-fg-color--transparent: rgba(255, 255, 255, .08);
 }
-.md-typeset a:not(.md-button):not(.headerlink):not(.tg-cap):not(.tg-thumb) {
+.md-typeset a:not(.md-button):not(.headerlink):not(.tg-cap):not(.tg-thumb):not(.sheet-preview-phone) {
   text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em;
 }
 .md-typeset a:not(.md-button):not(.headerlink):hover { text-decoration-thickness: 2px; }
@@ -85,3 +85,32 @@
 .md-typeset .person { margin: .7rem 0; }
 .md-typeset .avatar { width: 48px; height: 48px; border-radius: 50%; vertical-align: middle; margin-right: .7rem;
   border: 1px solid var(--md-default-fg-color--lightest); }
+
+/* phones: tables keep their width and scroll sideways instead of squeezing every column */
+@media screen and (max-width: 44.9375em) {
+  .md-typeset__table table:not([class]) { min-width: 40rem; }
+}
+
+/* V-model on phones: tap to open it full size (sheet-preview.js) */
+.vmodel-hint { display: none; }
+@media screen and (max-width: 44.9375em) {
+  svg.vmodel { cursor: zoom-in; }
+  .vmodel-hint { display: block; text-align: center; margin-top: -1rem;
+    font-size: .7rem; color: var(--md-default-fg-color--light); }
+}
+.sheet-peek-dialog.vmodel-dialog { height: fit-content; max-height: 90vh; }
+.vmodel-zoom { overflow: auto; padding: .5rem; }
+.vmodel-zoom svg.vmodel { width: 760px; max-width: none; margin: 0; cursor: auto; }
+
+/* Template pages on phones: a tap-to-open thumbnail replaces the inline live Sheet */
+.sheet-preview-phone { display: none; }
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .sheet-preview { display: none; }
+  .md-typeset .sheet-preview-phone { display: block; border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 6px; overflow: hidden; text-decoration: none; color: inherit; }
+  .sheet-preview-tap { display: block; padding: .5rem .75rem; font-size: .7rem; text-align: center;
+    color: var(--md-default-fg-color--light); }
+}
+
+/* the site name in the header also goes home (sheet-preview.js); on phones the logo is hidden */
+.md-header__title[data-home] { cursor: pointer; }

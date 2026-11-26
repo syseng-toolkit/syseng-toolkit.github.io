@@ -48,3 +48,40 @@ document.querySelectorAll(".tpl-gallery").forEach((g) => {
   window.addEventListener("load", update);
   update();
 });
+
+// Phones: the V-model diagram is too small to read, so tapping it opens it full size in a pop-up
+// that scrolls sideways. Links in the diagram still go to their template page.
+const phone = window.matchMedia("(max-width: 44.9375em)");
+document.querySelectorAll("svg.vmodel").forEach((svg) => {
+  const hint = document.createElement("p");
+  hint.className = "vmodel-hint";
+  hint.textContent = "Tap the diagram to enlarge it.";
+  svg.after(hint);
+});
+document.addEventListener("click", (e) => {
+  const svg = e.target.closest("svg.vmodel");
+  if (!svg || !phone.matches || e.target.closest("a") || svg.closest("dialog")) return;
+  const dlg = document.createElement("dialog");
+  dlg.className = "sheet-peek-dialog vmodel-dialog";
+  dlg.innerHTML = `
+    <div class="sheet-peek-bar">
+      <strong>V-model</strong>
+      <span class="sheet-peek-note">Scroll sideways</span>
+      <button type="button" aria-label="Close" autofocus>✕</button>
+    </div>
+    <div class="vmodel-zoom"></div>`;
+  dlg.querySelector(".vmodel-zoom").appendChild(svg.cloneNode(true));
+  dlg.querySelector("button").addEventListener("click", () => dlg.close());
+  dlg.addEventListener("click", (ev) => { if (ev.target === dlg) dlg.close(); });
+  dlg.addEventListener("close", () => dlg.remove());
+  document.body.appendChild(dlg);
+  dlg.showModal();
+});
+
+// Header site name goes home, like the logo does (on phones the logo is hidden behind the menu).
+const homeLink = document.querySelector("a.md-header__button.md-logo");
+const title = document.querySelector(".md-header__title");
+if (homeLink && title) {
+  title.dataset.home = "";
+  title.addEventListener("click", () => { location.href = homeLink.href; });
+}

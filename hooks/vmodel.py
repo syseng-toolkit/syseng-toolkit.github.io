@@ -164,8 +164,13 @@ def view_url(t):
 
 def preview(data, key):
     t = released(data, key, "template-preview")
-    return (f'<iframe class="sheet-preview" src="{view_url(t)}" loading="lazy" '
-            f'title="{t["name"]} template, live view"></iframe>')
+    # Wide screens: the live Sheet inline. Phones: a zoomed-out thumbnail that opens it in the
+    # pop-up (sheet-preview.js), since an inline Sheet is too cramped to read or scroll there.
+    view, name = view_url(t), t["name"]
+    return (f'<iframe class="sheet-preview" src="{view}" loading="lazy" title="{name} template, live view"></iframe>'
+            f'<a class="sheet-peek sheet-preview-phone" href="{view}" data-title="{name}">'
+            f'<span class="tg-thumb"><iframe src="{view}" loading="lazy" tabindex="-1" title="{name} template, preview"></iframe></span>'
+            f'<span class="sheet-preview-tap">Tap to open the live template</span></a>')
 
 
 def gallery(data, page_url):

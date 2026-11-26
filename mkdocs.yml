@@ -16,6 +16,9 @@ copyright: © 2026 Stephen Mock and Seena Vafaee · <a href="https://creativecom
 
 theme:
   name: material
+  icon:
+    logo: material/toolbox
+  favicon: assets/favicon.svg
   palette:
     - scheme: default
       primary: black
@@ -59,8 +62,6 @@ nav:
       - Document List: templates/document-list.md
       - Requirements: templates/requirements.md
   - About:
-      - Versions and releases: versions.md
-      - Design philosophy: philosophy.md
       - Contributors: contributors.md
       - License: license.md
 

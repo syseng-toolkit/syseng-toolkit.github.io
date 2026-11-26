@@ -19,3 +19,7 @@ If you changed it, say so ("Adapted from…"). Using the templates inside your o
 For anything the license doesn't cover, such as using the templates without the credit line, or working with us on a version for your organization, [open an issue](https://github.com/syseng-toolkit/syseng-toolkit.github.io/issues) and we'll talk.
 
 The full license text is in the [LICENSE](https://github.com/syseng-toolkit/syseng-toolkit.github.io/blob/main/LICENSE) file.
+
+## Privacy
+
+This site counts visits with [GoatCounter](https://www.goatcounter.com/), which uses no cookies and collects no personal information: only which pages are viewed, which links to templates are clicked, and where visitors came from.
